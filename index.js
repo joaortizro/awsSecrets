@@ -4,8 +4,9 @@ const port = 3000
 const app = express()
 
 // respond with "hello world" when a GET request is made to the homepage
-app.get('/', (req, res) => {
-  res.send('hello world')
+app.get('/test', (req, res) => {
+    res.status(200)
+    res.json({ hola: 'mundo' })
 })
 
 app.listen(port, () => {
